@@ -1,0 +1,73 @@
+/* This is the "root" selector, which selects the <html> tag, so other elements will not have the same style unless separately assigned */
+:root {
+    font-size: 16px;
+}
+
+
+/* This is called the "universal" selector and it selects ALL elements on the page */
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --white: #FFF;
+    --black: #000;
+    --grey: #444;
+    --lightGrey: #E9ECF1;
+    --backgroundBlue: #1C8BF9;
+}
+
+body {
+    background: var(--white);
+    overflow: none;
+}
+
+.header {
+    margin-top: 1rem;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#wishlist {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 2em;
+}
+
+.wishlist-item {
+    outline: 1px solid black;
+    width: 400px;
+    height: 400px;
+}
+
+#wishlist-form {
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+#submit {
+    grid-column: 1 / 3;
+    align-self: center;
+    justify-self: center;
+}
